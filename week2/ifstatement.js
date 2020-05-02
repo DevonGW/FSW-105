@@ -2,11 +2,22 @@ if (5>3){
     console.log("is greater than")
 }
 
-if ("cat"==3){
-    console.log("is the length")
+    else{
+        console.log("is not greater greater than")
 }
 
-if ("cat"=="Dog"){
+var cat = "cat";
+var dog = "dog";
+
+
+if (cat.length==3){
+    console.log("is the length")
+}
+else{
+    console.log("is not the length")
+}
+
+if (cat.length==dog.length){
     console.log( "is equal")
 }
    else{
@@ -18,19 +29,29 @@ var person = {
     age: 12
 }
 
-if("age"==18){
-    console.log("is allowed to enter movie")
+
+if(person.age>=18){
+    console.log("is allowed to enter movie");
 }
 
 else{
    console.log("not allowed to enter movie")
 }
 
-if("nameStartsWithB"){
-    console.log("is allowed to enter movie")
+
+if(person.name.charAt(0)==="B"){
+    console.log("is allowed to enter movie");
 }
 else{
     console.log("not allowed to enter movie")
+}
+
+if(person.age >=18 && person.name.charAt(0)==="B"){
+    console.log("is allowed to enter movie");
+}
+
+else{
+   console.log("not allowed to enter movie")
 }
 
 if( 1=="1" ){
@@ -46,23 +67,37 @@ else {
 if( 1<=2 && 2==4){
     console.log( "yes")
 }
+var typeofdogString
 
-if( "dog"){
-    console.log("is a string")
+if(typeofdogString=="string"){
+    console.log("is a string");
 }
-if("true"){
-   console.log("is a boolean")
+else{
+    console.log("is not a string")
 }
+
+var typeofBoolean = true;
+var boolean= true;
+
+if(typeofBoolean==boolean){
+    console.log("is a boolean");
+ }
+ else{
+     console.log("is not a boolean")
+ }
 
 if("name"="name"){
-   // console.log("name in variable defined")
+   console.log("name in variable defined")
 }
 if("s"> "12"){
-   // console.log("greater than")
+   console.log("greater than")
 }
 
-var myNum= 12;
-var isEven = myNum > 15 ? 'Even' : 'Odd';
+var myNum = 12;
+var isEven = myNum == 15 ? 'Even' : 'Odd';
+
+console.log("is even")
+
 
 
 
