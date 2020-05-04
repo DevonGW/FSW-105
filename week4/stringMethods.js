@@ -7,11 +7,13 @@ function CapitalAndLowercase(str) {
 
 console.log(CapitalAndLowercase(hello));
 
-function helloWorld(str){
-    return str
-}
+//Make a function that returns a number half the length, and rounded down. You'll need to use Math.floor().
+var hello = "devonwashd"
 
 console.log(Math.floor(hello.length/2))
+
+//Make a function that takes a string and returns that string where the first half is capitalized, and the second half is 
+//lower cased. (If the string length is odd, capitalize the shorter of the first half.
 
 function firstHalf(str){
     var half = Math.floor(hello.length/2);
