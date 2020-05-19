@@ -1,29 +1,38 @@
 //1) Given an array of numbers, return a new array that has only the numbers that are 5 or greater.
-const arr = [1,2,3,5,6,7,8,9,20]
-    const result = arr.filter (function(num){
-     if(num > 5){
-     return num}
-})
+    
+function fiveAndGreaterOnly(arr){
+    const result = arr.filter(function(num){
+        if(num >= 5){
+            return num;
+        }
+    });
+    return result;
+}
+console.log("Output from Requirement #1:" + fiveAndGreaterOnly[3, 6, 8, 2]);
 
-console.log(result)
+
+
 
 //  2) Given an array of numbers, return a new array that only includes the even numbers.
 
-const result = arr.filter(function(evensONly){
-    if(evensONly % 2 ===0 ){
-        return evensONly
-    }
-})
+function evensOnly(arr){
+    const result =arr.filter(function(num){
+        if (num % 2 == 0){
+            return num;
+        }
+    });
+    return result;
+}
 
-console.log(result)
+console.log(evensOnly([3, 6, 8, 2]))
 
 // 3) (NEED HELP) Given an array of strings, return a new array that only includes those that are 5 characters or fewer in length
 
 const words = ['tigers', 'cat', 'elite', 'example', 'dog', 'present'];
 
-const result = words.filter(word => word.length <5);
+const wordlength = words.filter(word => word.length <5);
 
-console.log(result);
+console.log(wordlength);
 
 // 4) Given an array of people objects, return a new array that has filtered out all those who don't belong to the club.
 
