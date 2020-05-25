@@ -16,12 +16,12 @@ console.log("Output from Requirement #1:" + fiveAndGreaterOnly[3, 6, 8, 2]);
 //  2) Given an array of numbers, return a new array that only includes the even numbers.
 
 function evensOnly(arr){
-    const result =arr.filter(function(num){
+    const evens =arr.filter(function(num){
         if (num % 2 == 0){
             return num;
         }
     });
-    return result;
+    return evens;
 }
 
 console.log(evensOnly([3, 6, 8, 2]))
@@ -42,13 +42,13 @@ const PeopleWhoBelongToTheIlluminati =[
     {name: "Eddie", member: true},
     {name: "Jay Z", member: false},
 ]
-const result = PeopleWhoBelongToTheIlluminati.filter(function(members){
+const people = PeopleWhoBelongToTheIlluminati.filter(function(members){
     if(members.member == "true"){
         return members
     }
 })
 
-console.log(result)
+console.log(people)
 
 // 5) Make a filtered list of all the people who are old enough to see The Matrix (younger than 18)
      
@@ -58,10 +58,10 @@ const matrix =[
     {name: "Eddie", age: 2},
     {name: "Jay Z", age: 100} ]
 
-        const result = matrix.filter(matrix => matrix.age >= 18);
+        const movie = matrix.filter(matrix => matrix.age >= 18);
 
       
-      console.log(result) //- How would I display this information inside the console instead of "Array(2) [Object, Object]"?
+      console.log(movie) //- How would I display this information inside the console instead of "Array(2) [Object, Object]"?
 
 // 1) Make an array of numbers that are doubles of the first array
 
@@ -77,9 +77,9 @@ console.log(doubles)
 
 const numbers = [15, 10, 40];
 
-    const result = numbers.map(toString);
+    const num = numbers.map(toString);
 
-console.log(result)
+console.log(num)
 
 
 
