@@ -8,7 +8,8 @@ function fiveAndGreaterOnly(arr){
     });
     return result;
 }
-console.log("Output from Requirement #1:" + fiveAndGreaterOnly[3, 6, 8, 2]);
+console.log("output requirment for .filter #1" )
+console.log(fiveAndGreaterOnly([3,6,8,2]));
 
 
 
@@ -26,13 +27,11 @@ function evensOnly(arr){
 
 console.log(evensOnly([3, 6, 8, 2]))
 
-// 3) (NEED HELP) Given an array of strings, return a new array that only includes those that are 5 characters or fewer in length
+// 3) Given an array of strings, return a new array that only includes those that are 5 characters or fewer in length
+const pets = ['tigers', 'cat', 'elite', 'example', 'dog', 'present'];
 
-const words = ['tigers', 'cat', 'elite', 'example', 'dog', 'present'];
 
-const wordlength = words.filter(word => word.length <5);
-
-console.log(wordlength);
+console.log(pets.filter(pet => pet.length >= 5))
 
 // 4) Given an array of people objects, return a new array that has filtered out all those who don't belong to the club.
 
@@ -42,44 +41,43 @@ const PeopleWhoBelongToTheIlluminati =[
     {name: "Eddie", member: true},
     {name: "Jay Z", member: false},
 ]
-const people = PeopleWhoBelongToTheIlluminati.filter(function(members){
-    if(members.member == "true"){
-        return members
-    }
-})
 
-console.log(people)
+function filterBymembership(members) {
+    if ( PeopleWhoBelongToTheIlluminati.member = true)
+      return PeopleWhoBelongToTheIlluminati;
+    } 
+
+    console.log(filterBymembership())
 
 // 5) Make a filtered list of all the people who are old enough to see The Matrix (younger than 18)
      
-const matrix =[
+const matrixMovie =[
     {name: "Angelina", age: 80},
     {name: "Lucas", age: 5},
     {name: "Eddie", age: 2},
     {name: "Jay Z", age: 100} ]
 
-        const movie = matrix.filter(matrix => matrix.age >= 18);
+        const movie = matrixMovie.filter(matrix => matrix.age >= 18);
 
       
       console.log(movie) //- How would I display this information inside the console instead of "Array(2) [Object, Object]"?
 
 // 1) Make an array of numbers that are doubles of the first array
 
-const doubleNumbers = [8, 10, 20]
-
-let doubles = doubleNumbers.map(function(num) {
-    return num * 2;
-})
-
-console.log(doubles)
-
+function doubleNumbers(arr){
+    const result = arr.map(function(num){
+        return num + num;
+    })// end
+    return result;
+}
+ console.log("output .map #1" + doubleNumbers([4, 8, 12]))
 // 2) Take an array of numbers and make them strings [did not understand]
 
-const numbers = [15, 10, 40];
+const arrayNum = [15, 10, 40];
 
-    const num = numbers.map(toString);
+    const numb = arrayNum.map(toString);
 
-console.log(num)
+console.log(numb)
 
 
 
@@ -95,13 +93,13 @@ console.log(namesUC)
 
 // 4) Make an array of strings of the names
  
-const celebs =[
+const members =[
      {name: "Angelina", age: 80},
      {name: "Lucas", age: 5},
      {name: "Eddie", age: 2},
      {name: "Jay Z", age: 100} ]
 
-    const namesOnly = celebs.map(function(nam){
+    const namesOnly = members.map(function(nam){
         return celebs.name
     })
     console.log(namesOnly)
@@ -126,20 +124,22 @@ const celebs =[
 
 // 1) Turn an array of numbers into a total of all the numbers
 
-const arr = [3, 10, 9].reduce(function(accumulator,currentValue){
-    return accumulator + currentValue;
-}, 0)
-
-    console.log(arr)
-
+function total(arr){
+    const result = arr.reduce(function(finalAddition,num){
+        finalAddition= finalAddition + num;
+        return finalAddition;
+    })
+    return result;
+}
+console.log("output of reduce() #1" + total([23, 45, 18]));
 
 //2) Turn an array of numbers into a long string of all those numbers.
 
-const num = [1,2,3]
+const numbers = [1,2,3]
 
 const result = (accumulator, currentValue) => accumulator + currentValue;
 
-console.log(num.reduce(result.toString()))
+console.log(numbers.reduce(result.toString()))
 
 //3) Turn an array of voter objects into a count of how many people voted
    
@@ -227,9 +227,9 @@ var voter =[
     
     //1) Sort an array from smallest number to largest
      
-    const  array = [20, 2, 3, 5, 90, 1];
-    array.sort();
-    console.log(array);
+    const  arrayNumbers = [20, 2, 3, 5, 90, 1];
+    arrayNumbers.sort();
+    console.log(arrayNumbers);
     
     //2) Sort an array from largest number to smallest
     const  array = [20, 2, 3, 5, 90, 1];
@@ -240,15 +240,15 @@ var voter =[
     
     //3) Sort an array from shortest string to longest
     
-    const words = ["dog", "wolf", "by", "eaten", "family"];
-    words.sort(function (a, b) {
+    const wordsAnimals = ["dog", "wolf", "by", "eaten", "family"];
+    wordsAnimals.sort(function (a, b) {
         return a.charAt[0] > b});
     
-        console.log(words)
+        console.log(wordsAnimals)
     //4) Sort an array alphabetically
     
-    const words = ["dog", "wolf", "by", "eaten", "family"];
-    words.sort(function (a, b) {
+    const animals = ["dog", "wolf", "by", "eaten", "family"];
+    animals.sort(function (a, b) {
         return a.localeCompare(b);
     })
-    console.log(words)
+    console.log(animals)
